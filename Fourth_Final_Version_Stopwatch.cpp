@@ -38,7 +38,6 @@ Timer timers[NUM_TIMERS];
 atomic<int> current_timer(0);
 atomic<bool> running_program(true);
 
-// --- добавено
 atomic<bool> lap_mode(false);
 atomic<size_t> lap_index(0);
 
@@ -154,7 +153,6 @@ int main() {
 
     atomic<bool> last_start(false);
     atomic<bool> last_mode(false);
-    // --- добавено
     static bool last_lap = false;
 
     thread buttonThread([&]() {
